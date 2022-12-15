@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const [active, setActive] = useState(false);
-  function activeClick() {
-    setActive(!active);
+  const activeClick = event => {
+    setActive(current => !current);
   }
   
     return (
-        <header className="header fixed-top d-flex align-items-center" id="header">
-          <div className="container d-flex align-items-center justify-content-between"><a className="logo d-flex align-items-center me-auto me-lg-0" href="/"><img src="images/logo.png" alt=""/>
-              <h1>Express<span>.</span></h1></a>
+        <header className="header fixed-top d-flex align-items-center border-bottom" id="header">
+          <div className="container d-flex align-items-center justify-content-between px-0">
+            <Link className="logo d-flex align-items-center me-auto me-lg-0" to={'/'}>
+              <img src="images/logo.png" alt=""/>
+              <h1>Express<span>.</span></h1></Link>
             <nav className="navbar" id="navbar">
               <ul>
-                <li><Link to={'/resi'} className="mx-5" onClick={() => activeClick()}>Cek Resi</Link></li>
+                <li><Link to={'/resi'} className={active ? 'mx-5 active' : 'mx-5'} onClick={() => activeClick()}>Cek Resi</Link></li>
                 <li><Link to={'/ongkir'} className="mx-5">Cek Ongkir</Link></li>
                 <li><Link to={'/contact'} className="mx-5">Contact</Link></li>
               </ul>
