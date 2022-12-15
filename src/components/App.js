@@ -5,7 +5,8 @@ import Login from "./Login";
 import Main from "./Main";
 import CekResi from "./CekResi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./Admin";
+import History from "./History";
+import Tambahresi from "./Tambahresi";
 function App() {
   return (
     <div>
@@ -17,7 +18,8 @@ function App() {
           <Route path="/resi" element={<CekResi />} />
           <Route path="/ongkir" element={<Main />} />
           <Route path="/contact" element={<Main />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/tambahresi" element={<Tambahresi />} />
         </Routes>
         <Footer />
       </BrowserRouter>
