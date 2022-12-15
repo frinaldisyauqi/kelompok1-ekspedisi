@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -7,9 +8,9 @@ function Header() {
               <h1>Express<span>.</span></h1></a>
             <nav className="navbar" id="navbar">
               <ul>
-                <li><a className="mx-5" href="/resi">Cek Resi</a></li>
-                <li><a className="mx-5" href="/ongkir">Cek Ongkir</a></li>
-                <li><a className="mx-5" href="/contact">Contact</a></li>
+                <li><Link to={'/resi'} className="mx-5">Cek Resi</Link></li>
+                <li><Link to={'/ongkir'} className="mx-5">Cek Ongkir</Link></li>
+                <li><Link to={'/contact'} className="mx-5">Contact</Link></li>
               </ul>
             </nav><a className="btn-sign-in px-5" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In</a><i className="mobile-nav-toggle mobile-nav-show bi bi-list"></i><i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
           </div>
