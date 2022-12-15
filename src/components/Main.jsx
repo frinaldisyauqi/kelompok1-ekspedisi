@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 
 function Main() {
     return (
@@ -13,7 +12,7 @@ function Main() {
               Hati Senang
             </h2>
             <p data-aos="fade-up" data-aos-delay="100">
-              Mengirim barang menggunakan J2F. akan mempermudah mu karena
+              Mengirim barang menggunakan J2F. Akan mempermudah mu karena
               memiliki pelayanan bintang lima
             </p>
             <div className="d-flex" data-aos="fade-up" data-aos-delay="200">

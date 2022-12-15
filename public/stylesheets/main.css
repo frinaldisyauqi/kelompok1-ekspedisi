@@ -1221,6 +1221,10 @@ section {
   font-weight: 700;
 }
 
+.book-a-table .container {
+  min-height: 500px;
+}
+
 .book-a-table .reservation-img {
   min-height: 500px;
   background-size: cover;
@@ -1400,6 +1404,18 @@ section {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact h1 {
+  font-family: var(--font-secondary);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contact .google-maps {
+  border: 0;
+  width: 100%;
+  height: 350px;
+}
+
 .contact .info-item {
   background: #f4f4f4;
   padding: 30px;
