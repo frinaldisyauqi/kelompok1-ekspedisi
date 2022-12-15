@@ -1,14 +1,13 @@
 import React from "react";
-import Header from "./Header";
 
-function Main() {
+function Admin() {
     return (
     <section className="hero d-flex align-items-center section-bg" id="hero">
       <div className="container">
         <div className="row justify-content-between gy-5">
           <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
             <h2 data-aos="fade-up">
-              Kirim Mudah
+              Ini Admin
               <br />
               Hati Senang
             </h2>
@@ -40,4 +39,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Admin
