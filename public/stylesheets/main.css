@@ -1215,6 +1215,12 @@ section {
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
+.book-a-table h1 {
+  font-family: var(--font-secondary);
+  font-size: 28px;
+  font-weight: 700;
+}
+
 .book-a-table .reservation-img {
   min-height: 500px;
   background-size: cover;
@@ -1327,7 +1333,7 @@ section {
 }
 
 .book-a-table .php-email-form button[type="submit"]:hover {
-  background: #ec2727;
+  background: var(--color-hover);
 }
 
 @-webkit-keyframes animate-loading {
@@ -1576,7 +1582,7 @@ section {
   transition: 0.5s;
   color: #fff;
   background: var(--color-primary);
-  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
+  box-shadow: 0 8px 28px var(--color-primary);
 }
 
 .hero .btn-sign-in:hover {
