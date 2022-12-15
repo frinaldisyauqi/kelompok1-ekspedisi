@@ -1221,6 +1221,10 @@ section {
   font-weight: 700;
 }
 
+.book-a-table .container {
+  min-height: 500px;
+}
+
 .book-a-table .reservation-img {
   min-height: 500px;
   background-size: cover;

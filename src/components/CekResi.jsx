@@ -2,28 +2,28 @@ import React from "react";
 
 function CekResi() {
     return (
-    <section id="book-a-table" className="book-a-table section-bg">
+    <section id="book-a-table" className="book-a-table section-bg h-100">
       <div className="container" data-aos="fade-up">
         <div className="section-header mt-5">
           <h1>Cek Resi</h1>
           {/* <p>Cek Resi</p> */}
         </div>
 
-        <div className="row g-0">
-          <div className="col-lg-12 d-flex align-items-center">
-            <form
+        <div className="row">
+          <div className="col-lg-12 d-flex align-items-center justify-content-center" >
+            <form 
               action=""
               method="post"
               role="form"
-              className="php-email-form"
+              className="php-email-form col-lg-8"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div className="row justify-content-between gy-4">
-                <div className="col-lg-4 col-md-6 w-100">
+              <div className="row gy-0">
+                <div className="col-lg-12">
                   <input
                     type="text"
-                    name="name"
+                    name="resi"
                     className="form-control"
                     id="name"
                     placeholder="Masukkan No. Resi"
@@ -41,8 +41,8 @@ function CekResi() {
                   Email to confirm your reservation. Thank you!
                 </div>
               </div>
-              <div className="text-center">
-                <button type="submit">Lacak</button>
+              <div className="d-flex justify-content-end text-center">
+                <button className="rounded py-2" type="submit">Lacak</button>
               </div>
             </form>
           </div>
