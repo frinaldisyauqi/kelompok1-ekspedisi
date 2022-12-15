@@ -5,6 +5,8 @@ import Header from "./Header";
 import Login from "./Login";
 import Main from "./Main";
 import CekResi from "./CekResi";
+import History from "./History";
+import Tambahresi from "./Tambahresi";
 import Admin from "./Admin";
 import CekOngkir from "./CekOngkir";
 import Contact from "./Contact";
@@ -18,6 +20,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/resi" element={<CekResi />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/tambahresi" element={<Tambahresi />} />
           <Route path="/ongkir" element={<CekOngkir />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
