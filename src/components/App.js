@@ -7,6 +7,8 @@ import CekResi from "./CekResi";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import History from "./History";
 import Tambahresi from "./Tambahresi";
+import ShippingOrder from "./ShippingOrder";
+import Pengiriman from "./Pengiriman";
 function App() {
   return (
     <div>
@@ -20,6 +22,8 @@ function App() {
           <Route path="/contact" element={<Main />} />
           <Route path="/history" element={<History />} />
           <Route path="/tambahresi" element={<Tambahresi />} />
+          <Route path="/shippingorder" element={<ShippingOrder />} />
+          <Route path="/pengiriman" element={<Pengiriman />} />
         </Routes>
         <Footer />
       </BrowserRouter>

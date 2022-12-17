@@ -11,7 +11,7 @@ function Tambahresi() {
                         <strong class="text-danger">Tambah Resi </strong>
                         <div class="class=col-auto">
                             <label for="inputResi" class="visually-hidden">Tambah Resi</label>
-                            <input type="text" class="form-control" id="inputResi" maxlength="8" placeholder="Tambah Resi"></input>
+                            <input type="text" class="form-control" id="inputResi" maxlength="8" placeholder="Tambah Resi"/>
                         </div>
                         <div class="col-auto">
                             <button type="submit" class="btn btn-primary mb-3" >Tambah</button>
