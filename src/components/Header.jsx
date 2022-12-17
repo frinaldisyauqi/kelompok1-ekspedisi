@@ -16,8 +16,8 @@ function Header() {
             <nav className="navbar" id="navbar">
               <ul>
                 <li><Link to={'/resi'} className={active ? 'mx-5 active' : 'mx-5'} onClick={() => activeClick()}>Cek Resi</Link></li>
-                <li><Link to={'/ongkir'} className="mx-5">Cek Ongkir</Link></li>
-                <li><Link to={'/contact'} className="mx-5">Contact</Link></li>
+                <li><Link to={'/ongkir'} className={active ? 'mx-5 active' : 'mx-5'} onClick={() => activeClick()}>Cek Ongkir</Link></li>
+                <li><Link to={'/contact'} className={active ? 'mx-5 active' : 'mx-5'} onClick={() => activeClick()}>Contact</Link></li>
               </ul>
             </nav><a className="btn-sign-in px-5" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In</a><i className="mobile-nav-toggle mobile-nav-show bi bi-list"></i><i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
           </div>

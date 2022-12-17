@@ -6,17 +6,25 @@ function History() {
     <div>
       <HeaderPengirim />
       <section className="hero d-flex align-items-center section-bg" id="hero">
-        <div class="my-5 container col-6">
-          <strong class="text-danger">No Resi : </strong>
-          <div class="accordion" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" >
+        <div className="mb-3 container col-6">
+          <h1>No Resi : </h1>
+          <div className="accordion" id="accordionPanelsStayOpenExample">
+            <div className="accordion-item">
+              <p className="accordion-header" id="panelsStayOpen-headingOne">
+                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" >
                   Tanggal, Hari
                 </button>
-              </h2>
-              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                <div class="accordion-body">
+              </p>
+              <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div className="accordion-body">
+                  <ul>
+                    <li>
+                      Test
+                    </li>
+                    <li>
+                      Test
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
