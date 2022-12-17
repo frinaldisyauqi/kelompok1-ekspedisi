@@ -1562,6 +1562,12 @@ section {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.hero h1 {
+  font-family: var(--font-secondary);
+  font-size: 28px;
+  font-weight: 700;
+}
+
 .hero {
   width: 100%;
   background-size: cover;

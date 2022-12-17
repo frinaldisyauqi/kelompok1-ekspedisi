@@ -12,8 +12,8 @@ function Contact() {
             <iframe
               className="google-maps"
               src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Cikutra&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             ></iframe>
           </div>
 
