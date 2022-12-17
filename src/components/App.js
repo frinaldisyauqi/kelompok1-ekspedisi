@@ -12,6 +12,8 @@ import Pengiriman from "./Pengiriman";
 import Admin from "./Admin";
 import CekOngkir from "./CekOngkir";
 import Contact from "./Contact";
+import ManageCabang from "./ManageCabang"
+import SetOngkir from "./SetOngkir";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/ongkir" element={<CekOngkir />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/managecabang" element={<ManageCabang/>} />
+          <Route path="/setongkir" element={<SetOngkir/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
