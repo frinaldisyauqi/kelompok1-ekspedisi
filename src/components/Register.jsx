@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -8,19 +8,21 @@ function Register() {
     const [password, setPassword] = useState('');
     const [confPassword, setConfPassword] = useState('');
     const [msg, setMsg] = useState('');
-    const history = useNavigate();
+    const navigate = useNavigate();
  
-    const Register = async (e) => {
+    const registerUser = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/users', {
-                name: name,
+            await axios.post('http://localhost:5000/api/register', {
+                nama: name,
                 email: email,
                 password: password,
                 confPassword: confPassword
+            }).then(res => {
+                setMsg(res.data.msg)
             });
             resetForm();
-            history.push("/");
+            navigate("/");
             
         } catch (error) {
             if (error.response) {
@@ -35,6 +37,10 @@ function Register() {
         setEmail("")
         setConfPassword("")
       }
+
+    const resetMsg = () => {
+        setMsg("")
+      }
     
     return(
         <div className="modal fade" id="registerModal" aria-hidden="true" aria-labelledby="registerModalLabel" tabIndex="-1">
@@ -42,10 +48,10 @@ function Register() {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h1 className="w-100 modal-title fs-5 text-center" id="registerModalLabel">Register</h1>
-                        <button className="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button className="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" onClick={resetMsg}></button>
                     </div>
                     <div className="modal-body">
-                    <form className="d-flex flex-column justify-content-center" id="customers" onSubmit={Register}>
+                    <form className="d-flex flex-column justify-content-center" id="customers" onSubmit={registerUser}>
                         <p>{msg}</p>
                         <label className="form-label p-2" htmlFor="E-Mail"> </label>
                         <input className="p-2 rounded border border-1" id="email" type="email" name="email" placeholder="E-Mail" required="required"
@@ -59,10 +65,9 @@ function Register() {
                         <label className="form-label p-2" htmlFor="confPassword"> </label>
                         <input className="p-2 rounded border border-1" id="confPassword" type="password" name="confPassword" placeholder="Confirm Password" required="required"
                             value={confPassword} onChange={(e) => setConfPassword(e.target.value)}/>
-                        <input className="my-3 btn-sign-in text-center rounded" type="submit" value="Register"/>
+                        <input className="my-3 btn-sign-in text-center rounded" type="submit" data-bs-dismiss="modal" aria-label="Close" value="Register"/>
                     </form>
                     </div>
-                    <div className="modal-footer"></div>
                 </div>
             </div>
         </div>

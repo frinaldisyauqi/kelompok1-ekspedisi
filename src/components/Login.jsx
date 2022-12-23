@@ -1,22 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Register from "./Register";
+import { useSignIn } from 'react-auth-kit';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [msg, setMsg] = useState('');
-    const history = useNavigate();
+    const navigate = useNavigate();
+    const signIn = new useSignIn();
  
     const Auth = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/login', {
+            await axios.post('http://localhost:5000/api/login', {
                 email: email,
                 password: password
+            })
+            .then(res => {
+                signIn({
+                    token: res.data.token, 
+                    tokenType: "Bearer",
+                    expiresIn: 3600,
+                    authState:{ roleUser: res.data.roleUser, nama: res.data.nama }
+                })
             });
-            history.push("/admin");
+            navigate("/");
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
@@ -52,7 +62,7 @@ function Login() {
                                             value={password} onChange={(e) => setPassword(e.target.value)}/>
                                         <label className="form-label p-2" htmlFor="Cabang Code"> </label>
                                         <input className="p-2 rounded border border-1" id="cabangKode" maxLength="8" type="text" name="cabangKode" placeholder="Kode Cabang"/>
-                                        <input className="mt-3 btn-sign-in text-center rounded" type="submit" value="Sign in"/>
+                                        <input className="mt-3 btn-sign-in text-center rounded" type="submit" data-bs-dismiss="modal" aria-label="Close" value="Sign in"/>
                                     </form>
                                     </div>
                                     <div className="tab-pane fade" id="nav-customer" role="tabpanel" aria-labelledby="nav-customer-tab" tabIndex="-1">
