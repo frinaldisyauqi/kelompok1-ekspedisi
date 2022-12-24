@@ -14,6 +14,7 @@ import HeaderAdmin from "./admin/HeaderAdmin";
 import ShippingOrder from "./admin/ShippingOrder";
 import Pengiriman from "./admin/Pengiriman";
 import Manager from "./manager/Manager";
+import ManageUser from "./manager/ManageUser";
 import HeaderManager from "./manager/HeaderManager";
 import ManageCabang from "./manager/ManageCabang";
 import SetOngkir from "./manager/SetOngkir";
@@ -37,6 +38,7 @@ function App() {
         <HeaderManager />
         <Routes>
           <Route path="/" element={<Manager />} />
+          <Route path="/manageuser" element={<ManageUser />} />
           <Route path="/managecabang" element={<ManageCabang />} />
           <Route path="/setongkir" element={<SetOngkir />} />
           <Route path="*" element={<NotFound />} />

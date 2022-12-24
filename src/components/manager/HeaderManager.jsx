@@ -24,6 +24,7 @@ function HeaderManager() {
           </Link>
           <nav className="navbar" id="navbar">
             <ul>
+              <li><Link to={'/manageuser'} className="mx-5">Manage User</Link></li>
               <li><Link to={'/managecabang'} className="mx-5">Manage Cabang</Link></li>
               <li><Link to={'/setongkir'} className="mx-5">Set Ongkir</Link></li>
             </ul>
