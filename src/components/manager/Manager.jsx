@@ -9,9 +9,7 @@ function Manager() {
         <div className="row justify-content-between gy-5">
           <div className="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
             <h2 data-aos="fade-up">
-              This is {auth().nama}
-              <br />
-              Hati Senang
+            Hello {auth().nama} !
             </h2>
             <p data-aos="fade-up" data-aos-delay="100">
               Mengirim barang menggunakan J2F. akan mempermudah mu karena

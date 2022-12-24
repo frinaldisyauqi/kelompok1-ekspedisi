@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
+import { useSignOut, useAuthUser } from "react-auth-kit";
 
 function HeaderPengirim() {
   const navigate = useNavigate();
@@ -23,8 +24,8 @@ function HeaderPengirim() {
           </Link>
           <nav className="navbar" id="navbar">
             <ul>
-              <li><Link to={'/user/history'} className="mx-5">History</Link></li>
-              <li><Link to={'/user/tambahresi'} className="mx-5">Tambah Resi</Link></li>
+              <li><Link to={'/history'} className="mx-5">History</Link></li>
+              <li><Link to={'/tambahresi'} className="mx-5">Tambah Resi</Link></li>
             </ul>
           </nav>
           <div className="dropdown">

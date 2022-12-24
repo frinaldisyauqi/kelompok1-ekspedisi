@@ -4,7 +4,6 @@ import HeaderAdmin from "./HeaderAdmin";
 function Pengiriman() {
     return (
         <div>
-            <HeaderAdmin />
             <br />
             <br />
             <div class="row my-5 d-flex justify-content-center">

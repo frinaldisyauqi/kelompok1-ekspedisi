@@ -17,8 +17,10 @@ import Manager from "./manager/Manager";
 import HeaderManager from "./manager/HeaderManager";
 import ManageCabang from "./manager/ManageCabang";
 import SetOngkir from "./manager/SetOngkir";
+import User from "./user/User";
 import History from "./user/History";
 import Tambahresi from "./user/Tambahresi";
+import HeaderPengirim from "./user/HeaderPengirim";
 
 function App() {
   const isAuthenticated = useIsAuthenticated();
@@ -50,6 +52,7 @@ function App() {
           <Route path="/" element={<Admin />} />
           <Route path="/shippingorder" element={<ShippingOrder />} />
           <Route path="/pengiriman" element={<Pengiriman />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -57,8 +60,12 @@ function App() {
   } else if (isAuthenticated() && isRole === 3) {
     return (
       <BrowserRouter>
+        <HeaderPengirim />
         <Routes>
-          <Route path="/" element={<Admin />} />
+          <Route path="/" element={<User />} />
+          <Route path="/tambahresi" element={<Tambahresi />} />
+          <Route path="/history" element={<History />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
